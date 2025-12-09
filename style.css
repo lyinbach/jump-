@@ -1,4 +1,3 @@
-/* Căn giữa toàn bộ trang, chỉ cần đẹp trên máy tính */
 html, body {
   margin: 0;
   padding: 0;
@@ -7,13 +6,10 @@ html, body {
   background: #ffffff;
 
   display: flex;
-  justify-content: center;  /* giữa ngang */
-  align-items: center;      /* giữa dọc */
+  justify-content: center;   /* căn giữa ngang */
+  align-items: center;       /* căn giữa dọc */
 }
 
-/* Canvas: cao = 80% màn hình, giữ đúng tỉ lệ poster */
 canvas {
-  height: 80vh;   /* chỉnh độ lớn poster: 70–85 tuỳ gu */
-  width: auto;    /* tự tính theo tỉ lệ 1684x2384 */
-  display: block;
+  display: block;            /* để không bị khoảng trắng lạ */
 }
