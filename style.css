@@ -1,18 +1,23 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 100%;
   background: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
+/* KHÓA TỈ LỆ — KHÔNG BAO GIỜ BỊ KÉO MÉO */
 canvas {
-  max-height: 90vh;
-  max-width: 90vw;
+  display: block;
   width: auto;
   height: auto;
-  display: block;
+
+  max-height: 90vh;
+  max-width: 90vw;
+
+  object-fit: contain;   /* giữ nguyên tỉ lệ dù khung thay đổi */
 }
