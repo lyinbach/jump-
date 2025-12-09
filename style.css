@@ -1,20 +1,17 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   background: #ffffff;
-
   display: flex;
-  justify-content: center;   /* căn giữa ngang */
-  align-items: center;       /* căn giữa dọc */
+  justify-content: center;  /* căn giữa ngang */
+  align-items: center;      /* căn giữa dọc */
 }
 
-/* Canvas: luôn nhỏ lại để thấy hết poster, không phóng to full màn hình */
 canvas {
+  max-height: 90vh;   /* poster cao tối đa = 90% màn hình */
   width: auto;
   height: auto;
-  max-height: 70vh;   /* cao tối đa = 70% màn hình */
-  max-width: 40vw;    /* rộng tối đa = 40% màn hình */
   display: block;
 }
