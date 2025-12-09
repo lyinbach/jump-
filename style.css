@@ -1,21 +1,17 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100vw;
   height: 100vh;
+  width: 100vw;
   background: #ffffff;
-
   display: flex;
-  justify-content: center;   /* canh ngang */
-  align-items: center;       /* canh dọc */
-  overflow: hidden;          /* tránh scroll làm xoay layout */
+  justify-content: center;  /* căn giữa ngang */
+  align-items: center;      /* căn giữa dọc */
 }
 
-/* Fix canvas luôn giữ đúng tỉ lệ dọc */
 canvas {
-  height: 90vh;              /* ưu tiên vừa chiều cao */
-  width: auto;               /* giữ tỷ lệ, không stretch */
-  max-width: 100vw;          /* không tràn chiều ngang */
+  max-height: 90vh;   /* poster cao tối đa = 90% màn hình */
+  width: auto;
+  height: auto;
   display: block;
-  object-fit: contain;       /* không bao giờ bị xoay hoặc méo */
 }
