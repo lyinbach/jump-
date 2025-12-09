@@ -5,12 +5,13 @@ html, body {
   width: 100vw;
   background: #ffffff;
   display: flex;
-  justify-content: center;  /* căn giữa ngang */
-  align-items: center;      /* căn giữa dọc */
+  justify-content: center;
+  align-items: center;
 }
 
 canvas {
-  max-height: 90vh;   /* poster cao tối đa = 90% màn hình */
+  max-height: 90vh;
+  max-width: 90vw;
   width: auto;
   height: auto;
   display: block;
