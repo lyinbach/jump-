@@ -1,17 +1,18 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  width: 100vw;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;  /* căn giữa ngang */
-  align-items: center;      /* căn giữa dọc */
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jump</title>
 
-canvas {
-  max-height: 90vh;   /* poster cao tối đa = 90% màn hình */
-  width: auto;
-  height: auto;
-  display: block;
-}
+    <!-- RẤT QUAN TRỌNG CHO MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+  </body>
+</html>
