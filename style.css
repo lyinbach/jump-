@@ -5,28 +5,15 @@ html, body {
   height: 100vh;
   background: #ffffff;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;   /* căn giữa ngang */
+  align-items: center;       /* căn giữa dọc */
 }
 
-/* Mặc định: không ép kích thước, để media query xử lý */
+/* Canvas LUÔN giữ đúng tỉ lệ, KHÔNG set cả width & height cùng lúc */
 canvas {
+  max-width: 90vw;   /* không rộng hơn 90% màn hình */
+  max-height: 90vh;  /* không cao hơn 90% màn hình */
+  width: auto;       /* chiều ngang tự tính theo tỉ lệ */
+  height: auto;      /* chiều cao tự tính theo tỉ lệ */
   display: block;
-}
-
-/* 🖥 Desktop + iPad: ưu tiên fit theo CHIỀU CAO (như bạn thích) */
-@media (min-width: 768px) {
-  canvas {
-    max-height: 90vh;  /* cao tối đa 90% chiều cao màn hình */
-    width: auto;       /* tự tính chiều ngang theo tỉ lệ */
-  }
-}
-
-/* 📱 Mobile: ưu tiên fit theo CHIỀU NGANG, vẫn không vượt quá chiều cao */
-@media (max-width: 767px) {
-  canvas {
-    width: 90vw;       /* ~90% chiều ngang màn hình */
-    height: auto;      /* tự tính chiều cao */
-    max-height: 90vh;  /* không cao quá 90% màn hình */
-  }
 }
