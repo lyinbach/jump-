@@ -1,3 +1,4 @@
+/* Trang trắng, căn canvas vào giữa màn hình */
 html, body {
   margin: 0;
   padding: 0;
@@ -6,10 +7,14 @@ html, body {
   background: #ffffff;
 
   display: flex;
-  justify-content: center;   /* căn giữa ngang */
-  align-items: center;       /* căn giữa dọc */
+  justify-content: center;   /* giữa ngang */
+  align-items: center;       /* giữa dọc */
+  overflow: hidden;          /* không cho xuất hiện thanh kéo */
 }
 
+/* Canvas: vẫn 1684x2384 bên trong, nhưng hiển thị thu nhỏ lại */
 canvas {
-  display: block;            /* để không bị khoảng trắng lạ */
+  height: 90vh;   /* poster cao ~90% chiều cao màn hình */
+  width: auto;    /* giữ đúng tỉ lệ 1684x2384 */
+  display: block;
 }
