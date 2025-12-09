@@ -5,14 +5,28 @@ html, body {
   height: 100vh;
   background: #ffffff;
   display: flex;
-  justify-content: center;   /* căn giữa ngang */
-  align-items: center;       /* căn giữa dọc */
+  justify-content: center;
+  align-items: center;
 }
 
-/* ƯU TIÊN FIT THEO CHIỀU CAO để mobile nhìn thấy hết poster */
+/* Mặc định: không ép kích thước, để media query xử lý */
 canvas {
-  height: 90vh;      /* luôn cao ≈ 90% chiều cao màn hình */
-  width: auto;       /* tự tính chiều ngang theo tỉ lệ */
-  max-width: 90vw;   /* nhưng không rộng quá 90% màn hình */
   display: block;
+}
+
+/* 🖥 Desktop + iPad: ưu tiên fit theo CHIỀU CAO (như bạn thích) */
+@media (min-width: 768px) {
+  canvas {
+    max-height: 90vh;  /* cao tối đa 90% chiều cao màn hình */
+    width: auto;       /* tự tính chiều ngang theo tỉ lệ */
+  }
+}
+
+/* 📱 Mobile: ưu tiên fit theo CHIỀU NGANG, vẫn không vượt quá chiều cao */
+@media (max-width: 767px) {
+  canvas {
+    width: 90vw;       /* ~90% chiều ngang màn hình */
+    height: auto;      /* tự tính chiều cao */
+    max-height: 90vh;  /* không cao quá 90% màn hình */
+  }
 }
