@@ -1,7 +1,21 @@
+/* Trang trắng, căn canvas vào chính giữa */
 html, body {
-  background: hotpink;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+
+  display: flex;
+  justify-content: center;   /* giữa ngang */
+  align-items: center;       /* giữa dọc */
 }
 
+/* Canvas gốc 1684x2384 nhưng được THU NHỎ, không méo */
 canvas {
-  display: none;
+  max-height: 90vh;   /* cao tối đa = 90% chiều cao màn hình */
+  max-width: 90vw;    /* phòng trường hợp màn hình rất hẹp */
+  width: auto;        /* giữ đúng tỉ lệ, không kéo ngang */
+  height: auto;       /* giữ đúng tỉ lệ */
+  display: block;
 }
